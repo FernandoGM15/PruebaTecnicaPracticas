@@ -1,0 +1,18 @@
+.scrolltbody {
+    display:block;
+    height: 47rem;
+    overflow:auto;
+}
+
+.scrollthead, .scrolltbody .scrolltr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+.scrollthead {
+    width: calc( 100% - 1em )
+}
+table {
+    width:100%;
+}

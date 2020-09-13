@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities</title>
+<!--------------------------- ICONOS --------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--------------------------- MATERIALIZE CSS --------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--------------------------- LOCAL CSS --------------------------->
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+
+<body class="orange lighten-4">
+    <!-- NAV BAR PARA REDIRECCIONAR MODIFICACION DE CIUDADES-->
+    <nav class="deep-orange">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">THE CITIES OF THE WORLD</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/Modify-cities">MODIFY LIST OF CITIES</a></li>
+          </ul>
+        </div>
+    </nav>
+    <!-- CIERRE DE NAV BAR -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col s6">
+                <!-- CARTA TODAS LAS CIUDADES ALMACENADAS EN LA TABLA-->
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center">ALL CITIES</span>
+                        <table class="highlight">
+                            <thead class="scrollthead">
+                                <tr class="scrolltr">
+                                    <td>ID</td>
+                                    <td>NAME</td>
+                                    <td>COUNTRY CODE</td>
+                                    <td>DISTRICT</td>
+                                    <td>POPULATION</td>
+                                </tr>
+                            </thead>
+                            <tbody id="allCities" class="scrolltbody">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- CIERRE CARTA CIUDADES-->
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <!-- CARTA GRAFICA-->
+                    <div class="card">
+                        <div class="card-content">
+                            <div id="chart"></div>
+                        </div>
+                    </div>
+                    <!-- CIERRE DE CARTA GRAFICA-->
+                    <!-- CARTA LAS 5 CUIDADES MAS POBLADAS-->
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title center">THE MOST POPULATED CITIES</span>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>NAME</td>
+                                        <td>COUNTRY CODE</td>
+                                        <td>DISTRICT</td>
+                                        <td>POPULATION</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="MostPopulatedCities">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--CIERRE CARTA LAS 5 CUIDADES MAS POBLADAS-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--------------------------- JQuery --------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--------------------------- HIGHCHARTS --------------------------->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!--------------------------- MATERIALIZE JS --------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+<!--------------------------- LOCAL JS --------------------------->
+<script src="../static/js/index.js"></script>
+</html>

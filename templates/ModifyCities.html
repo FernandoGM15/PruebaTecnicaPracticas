@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities</title>
+<!--------------------------- ICONOS --------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--------------------------- MATERIALIZE CSS --------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--------------------------- LOCAL CSS --------------------------->
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body class="orange lighten-4">
+    <!-- NAVBAR -->
+    <nav class="deep-orange">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">Modify Cities</a>
+        </div>
+    </nav>
+    <!-- CIERRE NAVBAR -->
+
+    <!-- ESTRUCTURA DE FORMULARIO MODAL -->
+    <div id="modalData" class="modal">
+        <form id="formData"action="#">
+            <div class="modal-content">
+                <span>Create or update City</span>
+              <div class="input-field">
+                  <input id="i_idCity" type="hidden">
+              </div>
+              <div class="input-field">
+                  <input type="text" id="i_nameCity" placeholder="Name">
+              </div>
+              <div class="input-field">
+                  <input type="text" id="i_countryCode" placeholder="Country Code" maxlength="3">
+              </div>
+              <div class="input-field">
+                  <input type="text" id="i_districtCity" placeholder="District">
+              </div>
+              <div class="input-field">
+                  <input type="text" id="i_populationCity" placeholder="Population">
+              </div>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-close waves-effect waves-light btn red" id="b_cancel">cancel</a>
+                <button class="modal-close waves-effect waves-light btn red" id="b_saveCity">Save</button>
+            </div>
+        </form>
+    </div>
+    <!-- CIERRE DE ESTRUCTURA MODAL -->
+    <div class="container">
+        <div class="row">
+            <!-- CARTA CREAR CIUDAD -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">
+                        <span>City Managment<button id="createCity" href="#modalData" class="waves-effect waves-light btn right red modal-trigger">Add city</button></span>        
+                    </div>
+                </div>
+            </div>
+            <!-- CIERRE CARTA CREAR CIUDAD -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <!-- COLECCION DE DATOS PARA ACTUALIZAR Y BORRAR -->
+                <ul class="collection" id="cityCollection">
+                </ul>
+                <!-- CIERRE CARTA COLECCION -->
+            </div>
+        </div>
+    </div>
+</body>
+<!--------------------------- JQuery --------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--------------------------- HIGHCHARTS --------------------------->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!--------------------------- MATERIALIZE JS --------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+<!--------------------------- LOCAL JS --------------------------->
+<script src="../static/js/modifyCities.js"></script>
+</html>
